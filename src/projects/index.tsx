@@ -12,14 +12,6 @@ export const projects: Project[] = [
         "Login e Register de usuários",
         "Salvar filmes em aba de favoritos",
         "Pesquisar Filmes"
-      ],
-      architecture:[
-        "JavaScript",
-        "React Js",
-        "Firebase",
-        "Axios",
-        "HTML",
-        "CSS"
       ]
     },
     techs: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Firebase"],
@@ -70,16 +62,6 @@ export const projects: Project[] = [
         "Integração com MapBox",
         "Criação de territórios",
         "Designação de território para usuário"
-      ],
-      architecture: [
-        "TypeScript",
-        "Tailwind CSS",
-        "React JS",
-        "Prisma ORM",
-        "Postgres",
-        "Node JS",
-        "Fastify",
-        "Axios"
       ]
     },
     techs: ["HTML", "TypeScript", "React", "Node.js", "tailwind Css", "Postgres", "Prisma ORM"],

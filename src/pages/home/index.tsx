@@ -13,6 +13,8 @@ import { projects } from "../../projects";
 import { ProjectCard } from "../../components/ProjectCard";
 import { fadeLeft, fadeLeft2 } from "../../animations/fade";
 import { motion } from "framer-motion";
+import { services } from "../../servicosPrestados";
+import { NeonButton, NeonGradientButton, NeonOutlineButton } from "../../components/NeonButton";
 
 export default function Home() {
   const [ openAbout, setOpenAbout ] = useState(false);
@@ -55,7 +57,12 @@ export default function Home() {
               >
                 Olá, eu sou o 
               </h1>
-              <h1 className="text-sky-500 text-3xl animate__animated animate__fadeInRight font-bold lg:text-4xl md:text-4xl"
+              <h1 
+                className="
+                  text-sky-500 text-3xl animate__animated 
+                  animate__fadeInRight font-bold lg:text-4xl 
+                  md:text-4xl text-shadow-[0_0_25px_rgba(59,130,246,0.85)]
+                "
                 style={{ animationDuration: "2.2s" }}
               >Micael Santos</h1>
               <h3 className="text-gray-500 animate__animated animate__fadeInRight lg:text-2xl md:text-xl"
@@ -64,13 +71,15 @@ export default function Home() {
 
               <button 
                 className="
-                  bg-linear-to-r from-sky-400 to-sky-700 
-                  text-white w-full rounded-2xl mt-4 mb-4 py-2 
-                  font-medium max-w-11/12 lg:max-w-8/12 lg:mt-12 md:max-w-9/12
-                  cursor-pointer 
-                  transform transition-all duration-300 ease-in-out
-                  hover:scale-105
-                  hover:from-amber-400 hover:to-amber-600
+                  w-11/12 cursor-pointer 
+                  relative px-6 py-2 rounded-2xl
+                  font-medium max-w-11/12 lg:max-w-8/12 mt-8 mb-4 
+                  md:max-w-9/12 text-white
+                  bg-gradient-to-r from-cyan-500 to-blue-500
+                  shadow-[0_0_15px_rgba(34,211,238,0.65)]
+                  transition-all duration-300
+                  hover:shadow-[0_0_20px_rgba(59,130,246,0.85)]
+                  hover:scale-[1.03]
                   animate__animated animate__fadeInUp
                 "
                 style={{ animationDuration: "2s" }}
@@ -85,16 +94,14 @@ export default function Home() {
 
               <button 
                 className="
-                  border border-sky-400 text-white
+                  border border-sky-400 text-sky-400
                   w-full rounded-2xl py-2 font-medium
                   max-w-11/12 lg:max-w-8/12 md:max-w-9/12
                   cursor-pointer
+                  shadow-[0_0_5px_rgba(59,130,246,0.85)]
                   transform transition-all duration-300 ease-in-out
                   hover:scale-105
-                  hover:bg-linear-to-r 
-                  hover:from-amber-400
-                  hover:to-amber-600
-                  hover:border-amber-700
+                  hover:shadow-[0_0_10px_rgba(59,130,246,0.85)]
                   animate__animated animate__fadeInUp
                 "
                 style={{ animationDuration: "2s" }}
@@ -149,29 +156,34 @@ export default function Home() {
           >
             <button 
               className="
-                bg-linear-to-r from-sky-400 to-sky-700 
-                w-11/12 rounded text-white 
-                font-medium py-2.5
+                w-11/12
+                relative px-6 py-3 rounded
                 lg:max-w-4/12 cursor-pointer
-                transform transition-all duration-300 ease-in-out
-                hover:scale-105
-                hover:from-amber-400 hover:to-amber-600
+                font-medium text-white
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                shadow-[0_0_10px_rgba(34,211,238,0.65)]
+                transition-all duration-300
+                hover:shadow-[0_0_15px_rgba(59,130,246,0.85)]
+                hover:scale-[1.03]
               "
               onClick={() => setOpenAbout(true)}
             >
               Mais Informações</button>
             <button 
               className="
-                bg-linear-to-r from-sky-400 to-sky-700 
-                w-11/12 rounded text-white 
-                font-medium py-2.5
+                w-11/12
+                relative px-6 py-3 rounded
                 lg:max-w-4/12 cursor-pointer
-                transform transition-all duration-300 ease-in-out
-                hover:scale-105
-                hover:from-amber-400 hover:to-amber-600
+                font-medium text-white
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                shadow-[0_0_10px_rgba(34,211,238,0.65)]
+                transition-all duration-300
+                hover:shadow-[0_0_15px_rgba(59,130,246,0.85)]
+                hover:scale-[1.03]
               "
             >
               Curriculum</button>
+
           </motion.div>
         </article>
 
@@ -213,9 +225,11 @@ export default function Home() {
                 flex flex-col items-center m-auto gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-115
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
-              <p className="text-sky-500 font-medium ">HTML5</p>
+              <p className="text-sky-500 font-medium">HTML5</p>
               <FaHtml5 className="text-sky-500 text-5xl"/>
               <div className="absolute bottom-0 left-0 h-[3px] w-full bg-linear-to-r from-sky-400 to-sky-700 "></div>
             </div>
@@ -225,6 +239,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">CSS3</p>
@@ -237,6 +253,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">REACT JS</p>
@@ -249,6 +267,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">JAVA SCRIPT</p>
@@ -261,6 +281,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">TYPE SCRIPT</p>
@@ -273,6 +295,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">TAILWIND</p>
@@ -285,6 +309,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">NODE JS</p>
@@ -297,6 +323,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">PRISMA</p>
@@ -309,6 +337,8 @@ export default function Home() {
                 flex flex-col m-auto items-center gap-2 bg-gray-700 rounded-tl-4xl w-28 py-4 relative
                 transform transition-all duration-300 ease-in-out
                 hover:scale-105
+                hover:shadow-[0_0_25px_rgba(34,211,238,0.65)]
+                hover:rounded-tl
               "
             >
               <p className="text-sky-500 font-medium ">POSTGRES</p>
@@ -324,9 +354,46 @@ export default function Home() {
 
       <hr className="max-w-10/12 mt-20 m-auto border-gray-600" />
 
+      <section id="Services" className="py-16 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-12 text-center">Serviços</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="relative bg-gray-800/80 rounded-xl p-8 border border-gray-700 overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_30px] hover:shadow-[currentColor]"
+              style={{ color: service.color }}
+            >
+              {/* Glow do título */}
+              <h3
+                className="text-2xl font-bold mb-4 relative z-10"
+                style={{
+                  textShadow: `0 0 8px ${service.color}, 0 0 16px ${service.color}`,
+                }}
+              >
+                {service.title}
+              </h3>
+              <p className="text-gray-300 z-10 relative">{service.description}</p>
+
+              {/* Glow extra atrás do card */}
+              <div
+                className="absolute inset-0 rounded-xl opacity-0 hover:opacity-30 transition-opacity duration-500"
+                style={{
+                  boxShadow: `0 0 50px 20px ${service.color}`,
+                  zIndex: 0,
+                }}
+              ></div>
+            </div>
+          ))}
+        </div>
+      </div>       
+      </section>
+
+      <hr className="max-w-10/12 m-auto border-gray-600" />
+
       <section
         id="projetos"
-        className="w-full max-w-10/12 m-auto overflow-hidden "
+        className="w-full max-w-10/12 m-auto overflow-hidden"
       >
 
         <motion.h1 
@@ -341,7 +408,7 @@ export default function Home() {
 
         <article>
         
-          <div className="flex flex-col gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 xl:grid-cols-2 ml-5 mr-5">
             {projects.map((project) => (
               <motion.div
                 initial={{ opacity: 0, x: -100 }}

@@ -15,5 +15,4 @@ export interface Project {
 interface DescriptionProps{
   intro: string;
   features?: string[];
-  architecture?: string[];
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Project } from "../../types/Project";
 import { ModalWindow } from "../ModalWindow";
 import { Link } from "react-router-dom";
+import { TechBadge } from "../TechBadge";
  
 interface ProjectCardProps{
     project: Project;
@@ -11,7 +12,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [ openInfoProject, setOpenInfoProject ] = useState(false);
 
   return (
-    <>
+    <div
+    >
       <div
         className="
           group
@@ -21,8 +23,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
           overflow-hidden
           shadow-lg
           transition-all
-          group-hover:scale-105
+          hover:scale-105
           duration-500
+          flex flex-col 
+          xl:h-[350px] xl:justify-around
         "
       >
         <div
@@ -30,20 +34,24 @@ export function ProjectCard({ project }: ProjectCardProps) {
             flex
             flex-col
             lg:flex-row
-            items-center
+            mt-6 gap-5 
+            w-full max-w-11/12 justify-center m-auto
           "
         >
           {/* Preview */}
-          <div className="lg:w-1/2 w-full">
+          <div className="w-full">
             <img
               src={project.image}
               alt={project.title}
               className="
-                w-full
-                h-64
+                w-[300px]
+                xl:w-[350px]
+                h-42
+                lg:ml-15
+                xl:ml-0
+                rounded-xl 
                 lg:h-full
-                object-cover
-                group-hover:scale-102
+                
                 transition-transform
                 duration-500
               "
@@ -51,7 +59,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           {/* Conteúdo */}
-          <div className="lg:w-1/2 w-full p-8 text-white">
+          <div className="flex flex-col w-10/12 max-w-2xs text-white lg:mr-10 xl:mr-0 text-left max-h-36 overflow-y-auto hide-scrollbar">
             <h3 className="text-2xl font-semibold mb-4">
               {project.title}
             </h3>
@@ -60,92 +68,98 @@ export function ProjectCard({ project }: ProjectCardProps) {
               {project.description}
             </p>
 
-            {/* Tecnologias */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.techs.map((tech) => (
-                <span
-                  key={tech}
-                  className="
-                    bg-sky-400/10
-                    text-sky-400
-                    px-3
-                    py-1
-                    rounded-full
-                    text-sm
-                  "
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+          </div>
 
-            {/* Botões */}
-            <div className="flex gap-4">
-              <button
+        </div>
+        <div className="flex flex-col items-center mt-5 mb-10 lg:mb-5">
+          {/* Tecnologias */}
+          <div className="flex flex-wrap gap-2 mb-6 justify-center max-w-10/12">
+            {project.techs.map((tech) => (
+              <span
+                key={tech}
+                className="hover:scale-105 cursor-default"
+              >
+                <TechBadge label={tech} color="sky"/>
+              </span>
+            ))}
+          </div>
+
+          {/* Botões */}
+          <div className="flex flex-col lg:flex-row lg:w-10/12 w-full gap-4">
+            <button
+              className="
+                bg-sky-400
+                text-[#212733]
+                px-5
+                py-2
+                rounded-lg
+                font-medium
+                hover:bg-sky-300
+                transition
+                cursor-pointer
+                w-10/12
+                m-auto
+                shadow-[0_0_20px_rgba(59,130,246,0.85)]
+              "
+              onClick={() => setOpenInfoProject(true)}
+            >
+              Mais informações
+            </button>
+
+            {project.liveUrl && (
+              <a
                 className="
-                  bg-sky-400
-                  text-[#212733]
+                  border
+                  border-sky-400
+                  text-sky-400
                   px-5
                   py-2
                   rounded-lg
-                  font-medium
-                  hover:bg-sky-300
+                  hover:bg-sky-400
+                  hover:text-[#212733]
                   transition
                   cursor-pointer
+                  text-center
+                  w-10/12
+                  m-auto
+                  shadow-[0_0_10px_rgba(59,130,246,0.85)]
                 "
-                onClick={() => setOpenInfoProject(true)}
+                href={project.liveUrl}
+                target="blank"
               >
-                Mais informações
-              </button>
+                Ver Projeto
+              </a>
+            )}
 
-              {project.liveUrl && (
-                <a
-                  className="
-                    border
-                    border-sky-400
-                    text-sky-400
-                    px-5
-                    py-2
-                    rounded-lg
-                    hover:bg-sky-400
-                    hover:text-[#212733]
-                    transition
-                    cursor-pointer
-                  "
-                  href={project.liveUrl}
-                  target="blank"
-                >
-                  Ver Projeto
-                </a>
-              )}
-
-              {!project.liveUrl && (
-                <Link
-                  className="
-                    border
-                    border-sky-400
-                    text-sky-400
-                    px-5
-                    py-2
-                    rounded-lg
-                    hover:bg-sky-400
-                    hover:text-[#212733]
-                    transition
-                    cursor-pointer
-                  "
-                  to={`/projeto/${project.id}`}
-                  target="blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver Projeto
-                </Link>
-              )}
+            {!project.liveUrl && (
+              <Link
+                className="
+                  border
+                  border-sky-400
+                  text-sky-400
+                  px-5
+                  py-2
+                  rounded-lg
+                  hover:bg-sky-400
+                  hover:text-[#212733]
+                  transition
+                  cursor-pointer
+                  text-center
+                  w-10/12
+                  m-auto
+                  shadow-[0_0_10px_rgba(59,130,246,0.85)]
+                "
+                to={`/projeto/${project.id}`}
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                Ver Projeto
+              </Link>
+            )}
               
-            </div>
           </div>
         </div>
       </div>
-
       
       <ModalWindow
           isOpen={openInfoProject}
@@ -173,13 +187,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </div>
             )}
 
-            {project.completeDescription?.architecture && (
+            {project.techs && (
               <div className="max-w-[90%]">
                 <h3 className="text-lg font-semibold text-sky-800 mb-2">
                   Arquitetura
                 </h3>
                 <ul className="list-disc list-inside space-y-1">
-                  {project.completeDescription.architecture.map((item, i) => (
+                  {project.techs.map((item, i) => (
                     <li className="text-gray-500" key={i}>{item}</li>
                   ))}
                 </ul>
@@ -187,7 +201,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             )}
           </div>
       </ModalWindow>
-    </>
+    </div>
     
   );
 }
