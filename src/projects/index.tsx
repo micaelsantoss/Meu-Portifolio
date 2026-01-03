@@ -103,13 +103,8 @@ export const projects: Project[] = [
       "Landing page estática de casamento, utilizando funcionalidades em JavaScript.",
     completeDescription: {
       intro:"Projeto criado para o meu casamento, uma landing page simples mas que continha as informações necessárias, como localização, horário, mas de uma forma intuitiva, onde cada convidado preenchia um formulário com seus dados, e automáticamente subia para minha planilha no google por meio de uma API externa.",
-      architecture:[
-        "JavaScript",
-        "HTML",
-        "CSS"
-      ]
     },
-    techs: ["HTML", "CSS", "JavaScript"],
+    techs: ["HTML", "CSS", "JavaScript", "HTML", "CSS", "JavaScript"],
     image: "/MidiasCasamento/ImagemCapa.png",
     liveUrl: "https://micaelsantoss.github.io/Projeto-Casamento/#noivos"
   },

@@ -3,24 +3,24 @@ export const services = [
     title: "Desenvolvimento Web",
     description:
       "Criação de sites e aplicações modernas usando React, Tailwind e boas práticas de programação para performance e responsividade.",
-    color: "#00fff7", // neon cyan
+    color: "#2683FF", // neon cyan
   },
   {
-    title: "Automação Industrial",
+    title: "Landing Page",
     description:
       "Desenvolvimento e manutenção de sistemas de automação, programação de PLCs e integração de máquinas industriais.",
-    color: "#bb00ff", // neon purple
+    color: "#2683FF", // neon purple
   },
   {
-    title: "Desenvolvimento Web",
+    title: "E-commerce",
     description:
       "Criação de sites e aplicações modernas usando React, Tailwind e boas práticas de programação para performance e responsividade.",
-    color: "#00fff7", // neon cyan
+    color: "#2683FF", // neon cyan
   },
   {
-    title: "Automação Industrial",
+    title: "Sistema de Gestão",
     description:
       "Desenvolvimento e manutenção de sistemas de automação, programação de PLCs e integração de máquinas industriais.",
-    color: "#bb00ff", // neon purple
+    color: "#2683FF", // neon purple
   },
 ];

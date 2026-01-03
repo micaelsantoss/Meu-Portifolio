@@ -12,7 +12,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [ openInfoProject, setOpenInfoProject ] = useState(false);
 
   return (
-    <div
+    <div className="h-full"
     >
       <div
         className="
@@ -20,13 +20,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           w-full
           bg-[#1b2130]
           rounded-2xl
-          overflow-hidden
+          h-full
           shadow-lg
           transition-all
           hover:scale-105
           duration-500
-          flex flex-col 
-          xl:h-[350px] xl:justify-around
+          overflow-hidden
+          border border-gray-700 
         "
       >
         <div
@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             flex-col
             lg:flex-row
             mt-6 gap-5 
-            w-full max-w-11/12 justify-center m-auto
+            w-full max-w-11/12 justify-center m-auto 
           "
         >
           {/* Preview */}
@@ -51,7 +51,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 xl:ml-0
                 rounded-xl 
                 lg:h-full
-                
                 transition-transform
                 duration-500
               "
@@ -59,7 +58,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           {/* Conteúdo */}
-          <div className="flex flex-col w-10/12 max-w-2xs text-white lg:mr-10 xl:mr-0 text-left max-h-36 overflow-y-auto hide-scrollbar">
+          <div className="flex flex-col w-10/12 max-w-2xs text-white lg:mr-10 xl:mr-0 text-left max-h-45 overflow-y-auto hide-scrollbar">
             <h3 className="text-2xl font-semibold mb-4">
               {project.title}
             </h3>
@@ -71,34 +70,31 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
         </div>
-        <div className="flex flex-col items-center mt-5 mb-10 lg:mb-5">
+        <div className="flex flex-col items-center mt-5 mb-10 lg:mb-5 overflow-hidden">
           {/* Tecnologias */}
-          <div className="flex flex-wrap gap-2 mb-6 justify-center max-w-10/12">
-            {project.techs.map((tech) => (
-              <span
-                key={tech}
-                className="hover:scale-105 cursor-default"
-              >
-                <TechBadge label={tech} color="sky"/>
-              </span>
+          <div className="flex gap-4 whitespace-nowrap scroll-left p-4">
+            {Array(10) // multiplicador para repetir várias vezes
+            .fill(project.techs) // preenche com todas as techs
+            .flat() // transforma em uma única lista
+            .map((tech, i) => (
+              <TechBadge key={i} label={tech} color="sky" />
             ))}
           </div>
 
           {/* Botões */}
-          <div className="flex flex-col lg:flex-row lg:w-10/12 w-full gap-4">
+          <div className="flex flex-col lg:flex-row lg:w-10/12 w-full gap-4 py-5">
             <button
               className="
                 bg-sky-400
                 text-[#212733]
-                px-5
-                py-2
+                px-5 py-2 
                 rounded-lg
                 font-medium
-                hover:bg-sky-300
+                hover:bg-sky-500
                 transition
                 cursor-pointer
-                w-10/12
-                m-auto
+                w-10/12 m-auto
+                hover:text-white
                 shadow-[0_0_20px_rgba(59,130,246,0.85)]
               "
               onClick={() => setOpenInfoProject(true)}
@@ -122,6 +118,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   text-center
                   w-10/12
                   m-auto
+                  hover:text-white
                   shadow-[0_0_10px_rgba(59,130,246,0.85)]
                 "
                 href={project.liveUrl}
@@ -147,6 +144,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   text-center
                   w-10/12
                   m-auto
+                  hover:text-white
                   shadow-[0_0_10px_rgba(59,130,246,0.85)]
                 "
                 to={`/projeto/${project.id}`}

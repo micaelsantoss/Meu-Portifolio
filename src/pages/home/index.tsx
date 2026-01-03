@@ -14,7 +14,6 @@ import { ProjectCard } from "../../components/ProjectCard";
 import { fadeLeft, fadeLeft2 } from "../../animations/fade";
 import { motion } from "framer-motion";
 import { services } from "../../servicosPrestados";
-import { NeonButton, NeonGradientButton, NeonOutlineButton } from "../../components/NeonButton";
 
 export default function Home() {
   const [ openAbout, setOpenAbout ] = useState(false);
@@ -34,10 +33,10 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/80"></div>
 
-        <div className="relative h-dvh lgx:h-[500px] flex w-full justify-center max-w-10/12 m-auto">
+        <div className="relative h-dvh md:h-[1024px] lg:h-[1366px] xl:h-dvh flex w-full justify-center max-w-10/12 m-auto">
           <article className="
               flex flex-col justify-center gap-10 lg:flex-row lg:items-center
-              [@media(min-width:1024px)_and_(max-width:1200px)]:flex-col
+              [@media(min-width:1024px)_and_(max-width:1200px)]:flex-col 
             "
           >
             <div>
@@ -61,7 +60,7 @@ export default function Home() {
                 className="
                   text-sky-500 text-3xl animate__animated 
                   animate__fadeInRight font-bold lg:text-4xl 
-                  md:text-4xl text-shadow-[0_0_25px_rgba(59,130,246,0.85)]
+                  md:text-4xl text-shadow-[0_0_15px]
                 "
                 style={{ animationDuration: "2.2s" }}
               >Micael Santos</h1>
@@ -356,37 +355,38 @@ export default function Home() {
 
       <section id="Services" className="py-16 text-white">
         <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">Serviços</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative bg-gray-800/80 rounded-xl p-8 border border-gray-700 overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_30px] hover:shadow-[currentColor]"
-              style={{ color: service.color }}
-            >
-              {/* Glow do título */}
-              <h3
-                className="text-2xl font-bold mb-4 relative z-10"
-                style={{
-                  textShadow: `0 0 8px ${service.color}, 0 0 16px ${service.color}`,
-                }}
+          <motion.h1 
+            className="text-4xl font-bold mb-12 text-center"
+            variants={fadeLeft} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once:true, amount: 0.6 }}
+          >Serviços</motion.h1>
+          <div 
+            className="grid md:grid-cols-2 gap-8"
+           
+          >
+            {services.map((service, index) => (
+              <motion.div
+                variants={fadeLeft} 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once:true, amount: 0.6 }}
+                key={index}
+                className="relative bg-[#1b2130] rounded-xl p-8 border border-gray-700 overflow-hidden transition-all duration-500 hover:scale-105 "
+                style={{ color: service.color }}
               >
-                {service.title}
-              </h3>
-              <p className="text-gray-300 z-10 relative">{service.description}</p>
-
-              {/* Glow extra atrás do card */}
-              <div
-                className="absolute inset-0 rounded-xl opacity-0 hover:opacity-30 transition-opacity duration-500"
-                style={{
-                  boxShadow: `0 0 50px 20px ${service.color}`,
-                  zIndex: 0,
-                }}
-              ></div>
-            </div>
-          ))}
-        </div>
-      </div>       
+                {/* Glow do título */}
+                <h3
+                  className="text-2xl font-bold mb-4 relative z-10"
+                >
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 z-10 relative">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>       
       </section>
 
       <hr className="max-w-10/12 m-auto border-gray-600" />
@@ -408,9 +408,10 @@ export default function Home() {
 
         <article>
         
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 xl:grid-cols-2 ml-5 mr-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 xl:grid-cols-2 ml-5 mr-5 mb-5">
             {projects.map((project) => (
               <motion.div
+                className="h-ful"
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false }}
@@ -449,7 +450,7 @@ export default function Home() {
           viewport={{ once:true, amount: 0.6 }}
         >
           <div className="flex flex-col items-center">
-            <MdEmail className="text-4xl mb-2 text-sky-500"/>
+            <MdEmail className="text-4xl mb-2 text-sky-500 text-shadow-[0_0_20px_rgba(59,130,246,0.85)]"/>
             <h3 className="font-medium text-white text-xl">Email</h3>
             <p className="text-gray-500">micaelsdsilva@gmail.com</p>
           </div>

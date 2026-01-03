@@ -53,3 +53,14 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome */
 }
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Classe utilitária Tailwind */
+.scroll-left {
+  display: flex;
+  animation: scroll-left 300s linear infinite;
+}
