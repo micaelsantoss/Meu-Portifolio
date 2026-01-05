@@ -1,7 +1,7 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaGithubSquare } from "react-icons/fa";
 import { SiPrisma } from "react-icons/si";
 import { BiLogoJavascript, BiLogoPostgresql, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
-import perfil from "/image.png"
+import perfil from "/Image.webp"
 import { MdEmail } from "react-icons/md";
 import { FaPhoneSquareAlt, FaLinkedin } from "react-icons/fa";
 import 'swiper/css';
@@ -24,7 +24,7 @@ export default function Home() {
         id="capa"
         className="
           relative
-          bg-[url('/Imagem-fundo-1.jpg')]
+          bg-[url('/Imagem-fundo-1.webp')]
           bg-
           bg-cover
           bg-center

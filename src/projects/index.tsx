@@ -15,14 +15,14 @@ export const projects: Project[] = [
       ]
     },
     techs: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Firebase"],
-    image: "/MidiasPrimeFlix/ImagemPrime1.png",
+    image: "/MidiasPrimeFlix/ImagemPrime1.webp",
     githubUrl: "https://github.com/micaelsantoss/Projeto-Prime-Flix",
     images: {
       desktop: [
-        "/MidiasPrimeFlix/ImagemPrime1.png",
-        "/MidiasPrimeFlix/ImagemPrime2.png",
-        "/MidiasPrimeFlix/ImagemPrime3.png",
-        "/MidiasPrimeFlix/ImagemPrime4.png",
+        "/MidiasPrimeFlix/ImagemPrime1.webp",
+        "/MidiasPrimeFlix/ImagemPrime2.webp",
+        "/MidiasPrimeFlix/ImagemPrime3.webp",
+        "/MidiasPrimeFlix/ImagemPrime4.webp",
       ]
     },
     videos: {
@@ -65,13 +65,13 @@ export const projects: Project[] = [
       ]
     },
     techs: ["HTML", "TypeScript", "React", "Node.js", "tailwind Css", "Postgres", "Prisma ORM"],
-    image: "/MidiasTerryLink/ImagemTerry1.png",
+    image: "/MidiasTerryLink/ImagemTerry1.webp",
     images: {
       desktop: [
-        "/MidiasTerryLink/ImagemTerry1.png",
-        "/MidiasTerryLink/ImagemTerry2.png",
-        "/MidiasTerryLink/ImagemTerry3.png",
-        "/MidiasTerryLink/ImagemTerry4.png",
+        "/MidiasTerryLink/ImagemTerry1.webp",
+        "/MidiasTerryLink/ImagemTerry2.webp",
+        "/MidiasTerryLink/ImagemTerry3.webp",
+        "/MidiasTerryLink/ImagemTerry4.webp",
       ]
     },
     videos: {
@@ -105,7 +105,7 @@ export const projects: Project[] = [
       intro:"Projeto criado para o meu casamento, uma landing page simples mas que continha as informações necessárias, como localização, horário, mas de uma forma intuitiva, onde cada convidado preenchia um formulário com seus dados, e automáticamente subia para minha planilha no google por meio de uma API externa.",
     },
     techs: ["HTML", "CSS", "JavaScript", "HTML", "CSS", "JavaScript"],
-    image: "/MidiasCasamento/ImagemCapa.png",
+    image: "/MidiasCasamento/ImagemCapa.webp",
     liveUrl: "https://micaelsantoss.github.io/Projeto-Casamento/#noivos"
   },
 ];
