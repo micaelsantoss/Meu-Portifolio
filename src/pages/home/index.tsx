@@ -452,7 +452,14 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <MdEmail className="text-4xl mb-2 text-sky-500 text-shadow-[0_0_20px_rgba(59,130,246,0.85)]"/>
             <h3 className="font-medium text-white text-xl">Email</h3>
-            <p className="text-gray-500">micaelsdsilva@gmail.com</p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=micaelsdsilva@gmail.com&su=Solicita%C3%A7%C3%A3o%20de%20Or%C3%A7amento&body=Ol%C3%A1%2C%0A%0AGostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20seus%20servi%C3%A7os.%0A%0AFico%20no%20aguardo.%0A%0AAtenciosamente%2C"
+              target="_blank"
+              className="text-gray-500 hover:text-red-600"
+            >
+              Enviar e-mail
+            </a>
+
           </div>
 
           <div className="flex flex-col items-center">

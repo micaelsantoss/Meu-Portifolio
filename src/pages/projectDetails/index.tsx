@@ -10,7 +10,7 @@ export function ProjectDetails() {
   if (!project) return <p>Projeto não encontrado</p>;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white px-6 py-12 text-center">
+    <div className="min-h-screen bg-primaria text-white px-6 py-12 text-center">
       <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
       <p className="text-gray-400 max-w-2xl mb-8 m-auto">
         {project.description}
