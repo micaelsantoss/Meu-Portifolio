@@ -3,51 +3,6 @@ import { Project } from "../types/Project";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Prime-Flix",
-    description:
-      "Projeto de lista de filmes, consumindo API do TMDB se atualizando em tempo real com os filmes do momento.",
-    completeDescription: {
-      intro:"Criei esse projeto para colocar em prática os conhecimentos adquiridos em javascript e react, fiz o consumo da api do The Movie DataBase para alimentar o site. Implementei o sistema de register, login e favoritos utilizando o Firebase e o FireStore. Implementei a funcionalidade de pesquisa de filmes.",
-      features: [
-        "Login e Register de usuários",
-        "Salvar filmes em aba de favoritos",
-        "Pesquisar Filmes"
-      ]
-    },
-    techs: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Firebase"],
-    image: "/MidiasPrimeFlix/ImagemPrime1.webp",
-    githubUrl: "https://github.com/micaelsantoss/Projeto-Prime-Flix",
-    images: {
-      desktop: [
-        "/MidiasPrimeFlix/ImagemPrime1.webp",
-        "/MidiasPrimeFlix/ImagemPrime2.webp",
-        "/MidiasPrimeFlix/ImagemPrime3.webp",
-        "/MidiasPrimeFlix/ImagemPrime4.webp",
-      ]
-    },
-    videos: {
-      desktop: [
-        "https://player.vimeo.com/video/1150865630" +
-        "?title=0" +
-        "&byline=0" +
-        "&portrait=0" +
-        "&badge=0" +
-        "&controls=1" +
-        "&autopause=1" 
-      ],
-      mobile: [
-        "https://player.vimeo.com/video/1150865667" +
-        "?title=0" +
-        "&byline=0" +
-        "&portrait=0" +
-        "&badge=0" +
-        "&controls=1" +
-        "&autopause=1"
-      ]
-    }
-  },
-  {
-    id: 2,
     title: "Terry-Link",
     description:
       "Projeto para criação e controle de territórios em tempo real, utilizando MapBox.",
@@ -72,11 +27,23 @@ export const projects: Project[] = [
         "/MidiasTerryLink/ImagemTerry2.webp",
         "/MidiasTerryLink/ImagemTerry3.webp",
         "/MidiasTerryLink/ImagemTerry4.webp",
+      ],
+      mobile: [
+        "/MidiasTerryLink/ImagemMobileTerry1.webp",
+        "/MidiasTerryLink/ImagemMobileTerry2.webp",
+        "/MidiasTerryLink/ImagemMobileTerry3.webp",
+        "/MidiasTerryLink/ImagemMobileTerry4.webp",
+        "/MidiasTerryLink/ImagemMobileTerry5.webp",
+        "/MidiasTerryLink/ImagemMobileTerry6.webp",
+        "/MidiasTerryLink/ImagemMobileTerry7.webp",
+        "/MidiasTerryLink/ImagemMobileTerry8.webp",
+        "/MidiasTerryLink/ImagemMobileTerry9.webp",
+        "/MidiasTerryLink/ImagemMobileTerry10.webp",
       ]
     },
     videos: {
       desktop: [
-        "https://player.vimeo.com/video/1150865647" +
+        "https://player.vimeo.com/video/1151721970" +
         "?title=0" +
         "&byline=0" +
         "&portrait=0" +
@@ -85,7 +52,7 @@ export const projects: Project[] = [
         "&autopause=1"
       ],
       mobile: [
-        "https://player.vimeo.com/video/1150865681" +
+        "https://player.vimeo.com/video/1151722005" +
         "?title=0" +
         "&byline=0" +
         "&portrait=0" +
@@ -95,6 +62,61 @@ export const projects: Project[] = [
       ]
     }
      
+  },
+  {
+    id: 2,
+    title: "Prime-Flix",
+    description:
+      "Projeto de lista de filmes, consumindo API do TMDB se atualizando em tempo real com os filmes do momento.",
+    completeDescription: {
+      intro:"Criei esse projeto para colocar em prática os conhecimentos adquiridos em javascript e react, fiz o consumo da api do The Movie DataBase para alimentar o site. Implementei o sistema de register, login e favoritos utilizando o Firebase e o FireStore. Implementei a funcionalidade de pesquisa de filmes.",
+      features: [
+        "Login e Register de usuários",
+        "Salvar filmes em aba de favoritos",
+        "Pesquisar Filmes"
+      ]
+    },
+    techs: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Firebase"],
+    image: "/MidiasPrimeFlix/ImagemPrime1.webp",
+    githubUrl: "https://github.com/micaelsantoss/Projeto-Prime-Flix",
+    images: {
+      desktop: [
+        "/MidiasPrimeFlix/ImagemPrime1.webp",
+        "/MidiasPrimeFlix/ImagemPrime2.webp",
+        "/MidiasPrimeFlix/ImagemPrime3.webp",
+        "/MidiasPrimeFlix/ImagemPrime4.webp",
+      ],
+      mobile: [
+        "/MidiasPrimeFlix/ImagemMobilePrime1.webp",
+        "/MidiasPrimeFlix/ImagemMobilePrime2.webp",
+        "/MidiasPrimeFlix/ImagemMobilePrime3.jpg",
+        "/MidiasPrimeFlix/ImagemMobilePrime4.jpg",
+        "/MidiasPrimeFlix/ImagemMobilePrime1.webp",
+        "/MidiasPrimeFlix/ImagemMobilePrime2.webp",
+        "/MidiasPrimeFlix/ImagemMobilePrime3.jpg",
+        "/MidiasPrimeFlix/ImagemMobilePrime4.jpg",
+      ]
+    },
+    videos: {
+      desktop: [
+        "https://player.vimeo.com/video/1150865630" +
+        "?title=0" +
+        "&byline=0" +
+        "&portrait=0" +
+        "&badge=0" +
+        "&controls=1" +
+        "&autopause=1" 
+      ],
+      mobile: [
+        "https://player.vimeo.com/video/1151721853" +
+        "?title=0" +
+        "&byline=0" +
+        "&portrait=0" +
+        "&badge=0" +
+        "&controls=1" +
+        "&autopause=1"
+      ]
+    }
   },
   {
     id: 3,

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Swiper ,SwiperSlide } from "swiper/react";
 
 interface MidiasProps{
   images?: ImagesProps;
@@ -32,7 +33,7 @@ export function ProjectGallery({ images, videos }: MidiasProps) {
     <div className="space-y-12">
       {/* Desktop */}
       <section>
-        <h2 className="text-xl mb-4 text-center">Versão Desktop</h2>
+        <h2 className="text-3xl mb-5 mb:text-4xl lg:mb-10 text-center">Versão Desktop</h2>
         <div className="grid md:grid-cols-2 gap-6 w-[80%] max-w-5xl mx-auto">
           {images?.desktop.map((img, i) => (
             <img
@@ -49,16 +50,41 @@ export function ProjectGallery({ images, videos }: MidiasProps) {
       {/* Mobile */}
       {images?.mobile && (
         <section>
-          <h2 className="text-xl mb-4">Versão Mobile</h2>
-          <div className="flex gap-6">
-            {images?.mobile.map((img, i) => (
-              <div 
-                key={i} className="w-[220px]"
-                onClick={() => setActiveImage(img)}
-              >
-                <img src={img} className="rounded-[30px]" />
-              </div>
-            ))}
+          <h2 className="text-3xl mb-5 mb:text-4xl lg:mb-10 text-center">Versão Mobile</h2>
+          <div className="w-full max-w-5xl m-auto">
+            <Swiper
+              spaceBetween={20}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              loop={true}
+              centeredSlides
+              pagination={{ clickable: true }}
+              className="w-full px-4"
+            >
+              {images.mobile.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    className="shadow-lg rounded-xl overflow-hidden cursor-pointer"
+                    onClick={() => setActiveImage(img)}
+                  >
+                    <img
+                      src={img}
+                      className="w-[250px] rounded-xl m-auto"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
           </div>
         </section>
       )}
@@ -66,7 +92,7 @@ export function ProjectGallery({ images, videos }: MidiasProps) {
       {/* Vídeo */}
       {videos && (
         <section>
-          <h2 className="text-xl mb-4">Demonstração</h2>
+          <h2 className="text-3xl mb-5 mb:text-4xl lg:mb-10 text-center">Demonstração</h2>
           <div className="flex flex-col justify-center items-center lg:flex-row gap-6 w-[80%] max-w-5xl mx-auto">
             {videos.desktop.map((video, i) => (
               <div key={i} className="w-full max-w-3xl mx-auto">
