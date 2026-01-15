@@ -28,7 +28,7 @@ export function ModalWindow({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center ">
       
       {/* BACKDROP */}
       <div
@@ -39,7 +39,19 @@ export function ModalWindow({
       {/* MODAL */}
       <section
         className={clsx(
-          "relative bg-primaria rounded-2xl p-6 w-11/12 max-w-xl shadow-xl z-50",
+          `
+            relative 
+            bg-primaria 
+            rounded-2xl 
+            p-6 
+            w-11/12 
+            max-w-xl 
+            shadow-xl 
+            z-50
+            max-h-[90vh]
+            overflow-y-auto
+            hide-scrollbar
+          `,
           className
         )}
       >

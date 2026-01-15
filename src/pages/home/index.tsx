@@ -362,16 +362,15 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once:true, amount: 0.6 }}
           >Serviços</motion.h1>
-          <div 
+          <motion.div 
             className="grid md:grid-cols-2 gap-8"
-           
+            variants={fadeLeft} 
+            initial="hidden"
+            whileInView="visible"
+             viewport={{ once:true, amount: 0.6 }}
           >
             {services.map((service, index) => (
-              <motion.div
-                variants={fadeLeft} 
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once:true, amount: 0.6 }}
+              <div  
                 key={index}
                 className="relative bg-[#1b2130] rounded-xl p-8 border border-gray-700 overflow-hidden transition-all duration-500 hover:scale-105 "
                 style={{ color: service.color }}
@@ -383,9 +382,9 @@ export default function Home() {
                   {service.title}
                 </h3>
                 <p className="text-gray-300 z-10 relative">{service.description}</p>
-              </motion.div>
+              </div>
             ))}
-          </div>
+          </motion.div>
         </div>       
       </section>
 
@@ -414,7 +413,7 @@ export default function Home() {
                 className="h-ful"
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <ProjectCard key={project.id} project={project}/>
