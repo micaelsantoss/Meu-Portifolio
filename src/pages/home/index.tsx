@@ -167,8 +167,10 @@ export default function Home() {
               "
               onClick={() => setOpenAbout(true)}
             >
-              Mais Informações</button>
-            <button 
+              Mais Informações
+            </button>
+
+            <a 
               className="
                 w-11/12
                 relative px-6 py-3 rounded
@@ -179,9 +181,13 @@ export default function Home() {
                 transition-all duration-300
                 hover:shadow-[0_0_15px_rgba(59,130,246,0.85)]
                 hover:scale-[1.03]
+                text-center
               "
+              href="/Micael_Santos_Desenvolvedor_FullStack_Junior.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Curriculum</button>
+              Curriculum</a>
 
           </motion.div>
         </article>
