@@ -8,6 +8,7 @@ export interface Project {
   // opcionais para evoluir depois
   githubUrl?: string;
   liveUrl?: string;
+  url?: string;
   images?: object
   videos?: object
 }

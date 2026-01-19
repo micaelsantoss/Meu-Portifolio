@@ -78,6 +78,7 @@ export const projects: Project[] = [
     },
     techs: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Firebase"],
     image: "/MidiasPrimeFlix/ImagemPrime1.webp",
+    url: "https://projeto-prime-flix-nine.vercel.app/",
     githubUrl: "https://github.com/micaelsantoss/Projeto-Prime-Flix",
     images: {
       desktop: [
@@ -120,6 +121,51 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: "Web-Carros",
+    description:
+      "Projeto de uma loja de carros online, com sistema de login, postagem de carros, busca e compras de veículos.",
+    completeDescription: {
+      intro:"Criei esse projeto para aprimorar os conhecimentos em React e TypeScript, desenvolvendo um sistema completo de loja de carros online. O sistema conta com funcionalidades de login e registro de usuários, cadastro de veículos, busca avançada, além de permitir a atualização e exclusão dos veículos cadastrados. Também fiz o uso do context Api para gerenciar o estado da aplicação.",
+      features: [
+        "Login e Register de usuários",
+        "Cadastro de veículos",
+        "Busca de veículos",
+        "Atualização e exclusão de veículos",
+      ]
+    },
+    techs: ["ReactJS", "Tailwind CSS", "TypeScript", "SupaBase"],
+    image: "/MidiasWebCars/ImagemWebCarDesktop1.webp",
+    url: "https://web-carros-lake.vercel.app/",
+    githubUrl: "https://github.com/micaelsantoss/Projeto-WebCarros",
+    images: {
+      desktop: [
+        "/MidiasWebCars/ImagemWebCarDesktop1.webp",
+        "/MidiasWebCars/ImagemWebCarDesktop2.webp",
+        "/MidiasWebCars/ImagemWebCarDesktop3.webp",
+        "/MidiasWebCars/ImagemWebCarDesktop4.webp",
+        "/MidiasWebCars/ImagemWebCarDesktop5.webp",
+      ],
+      mobile: [
+        
+      ]
+    },
+    videos: {
+      desktop: [
+        "https://player.vimeo.com/video/1156270237" +
+        "?title=0" +
+        "&byline=0" +
+        "&portrait=0" +
+        "&badge=0" +
+        "&controls=1" +
+        "&autopause=1" 
+      ],
+      mobile: [
+
+      ]
+    }
+  },
+  {
+    id: 4,
     title: "Página de Casamento",
     description:
       "Landing page estática de casamento, utilizando funcionalidades em JavaScript.",
@@ -128,7 +174,7 @@ export const projects: Project[] = [
     },
     techs: ["HTML", "CSS", "JavaScript", "HTML", "CSS", "JavaScript"],
     image: "/MidiasCasamento/ImagemCapa.webp",
-    liveUrl: "https://micaelsantoss.github.io/Projeto-Casamento/#noivos"
+    liveUrl: "https://micaelsantoss.github.io/Projeto-Casamento"
   },
 ];
 

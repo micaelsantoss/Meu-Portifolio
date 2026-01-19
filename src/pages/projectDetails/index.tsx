@@ -19,9 +19,9 @@ export function ProjectDetails() {
       <ProjectGallery images={project.images} videos={project.videos} />
 
       <div className="flex gap-4 mt-10 justify-center">
-        {project.liveUrl && (
+        {project.url && (
           <a 
-            href={project.liveUrl} 
+            href={project.url} 
             target="_blank" 
             className="
                 border

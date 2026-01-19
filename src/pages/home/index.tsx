@@ -183,7 +183,7 @@ export default function Home() {
                 hover:scale-[1.03]
                 text-center
               "
-              href="/Micael_Santos_Desenvolvedor_FullStack_Junior.pdf"
+              href="/Micael_Santos_Desenvolvedor_FullStack_Junior.pdf.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
